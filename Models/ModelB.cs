@@ -11,6 +11,6 @@ namespace EFDoubleMigrationsTest.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public Guid Id { get; set; }
+        public Guid ModelBId { get; set; }
     }
 }

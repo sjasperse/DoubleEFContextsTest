@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EFDoubleMigrationsTest.Contexts.FeatureA.Models
+namespace EFDoubleMigrationsTest.Models
 {
     public class ModelA
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public Guid Id { get; set; }
+        public Guid ModelAId { get; set; }
     }
 }

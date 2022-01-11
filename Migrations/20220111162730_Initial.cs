@@ -8,21 +8,21 @@ namespace EFDoubleMigrationsTest.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ModelBs",
+                name: "ModelAs",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    ModelAId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ModelBs", x => x.Id);
+                    table.PrimaryKey("PK_ModelAs", x => x.ModelAId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ModelBs");
+                name: "ModelAs");
         }
     }
 }

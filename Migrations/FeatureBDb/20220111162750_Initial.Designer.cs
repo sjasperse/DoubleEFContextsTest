@@ -4,14 +4,16 @@ using EFDoubleMigrationsTest;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EFDoubleMigrationsTest.Migrations
+namespace EFDoubleMigrationsTest.Migrations.FeatureBDb
 {
     [DbContext(typeof(FeatureBDbContext))]
-    partial class FeatureBDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220111162750_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,10 +23,10 @@ namespace EFDoubleMigrationsTest.Migrations
 
             modelBuilder.Entity("EFDoubleMigrationsTest.Models.ModelB", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ModelBId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                    b.HasKey("ModelBId");
 
                     b.ToTable("ModelBs");
                 });

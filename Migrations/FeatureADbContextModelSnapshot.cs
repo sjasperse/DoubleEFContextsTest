@@ -4,16 +4,14 @@ using EFDoubleMigrationsTest;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFDoubleMigrationsTest.Migrations
 {
-    [DbContext(typeof(FeatureBDbContext))]
-    [Migration("20220111160652_Initial")]
-    partial class Initial
+    [DbContext(typeof(FeatureADbContext))]
+    partial class FeatureADbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,14 +19,14 @@ namespace EFDoubleMigrationsTest.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EFDoubleMigrationsTest.Models.ModelB", b =>
+            modelBuilder.Entity("EFDoubleMigrationsTest.Models.ModelA", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ModelAId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                    b.HasKey("ModelAId");
 
-                    b.ToTable("ModelBs");
+                    b.ToTable("ModelAs");
                 });
 #pragma warning restore 612, 618
         }
