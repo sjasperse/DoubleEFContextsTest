@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EFDoubleMigrationsTest.Migrations.FeatureBDb
+namespace DoubleEFContextsTest.Migrations.FeatureBDb
 {
     public partial class Initial : Migration
     {

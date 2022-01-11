@@ -1,9 +1,8 @@
 ﻿
 using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace EFDoubleMigrationsTest {
+namespace DoubleEFContextsTest {
     public class Program
     {
         public static void Main()

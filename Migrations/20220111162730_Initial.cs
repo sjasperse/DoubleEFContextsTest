@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EFDoubleMigrationsTest.Migrations
+namespace DoubleEFContextsTest.Migrations
 {
     public partial class Initial : Migration
     {

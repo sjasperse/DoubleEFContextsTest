@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EFDoubleMigrationsTest.Models;
+using DoubleEFContextsTest.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EFDoubleMigrationsTest
+namespace DoubleEFContextsTest
 {
     public class FeatureBDbContext : DbContext
     {
